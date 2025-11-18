@@ -23,8 +23,8 @@ This project utilizes an ESP8266 (NodeMCU) to automatically control the speed of
 | Component | NodeMCU Pin | Description |
 | :---- | :---- | :---- |
 | **DHT11 Data** | D4 (GPIO 2\) | Temperature Data Signal |
-| **OLED SDA** | D2 (GPIO 4\) | I2C Data Line |
-| **OLED SCL** | D1 (GPIO 5\) | I2C Clock Line |
+| **OLED SDA** | D2 (GPIO 21\) | I2C Data Line |
+| **OLED SCL** | D1 (GPIO 22\) | I2C Clock Line |
 | **Fan Signal** | D5 (GPIO 14\) | PWM Control Signal to MOSFET/Base |
 | **VCC** | 3.3V / Vin | Power (Match component voltage) |
 | **GND** | GND | Common Ground (Essential) |
@@ -45,8 +45,8 @@ This project utilizes an ESP8266 (NodeMCU) to automatically control the speed of
 
 The system uses a linear mapping logic to determine fan speed:
 
-* **Below 20°C:** Fan is **OFF** (0% speed).  
-* **20°C \- 35°C:** Fan speed scales linearly from **20% to 100%**.  
+* **Below 15°C:** Fan is **OFF** (0% speed).  
+* **15°C \- 35°C:** Fan speed scales linearly from **20% to 100%**.  
 * **Above 35°C:** Fan runs at **Maximum Speed** (100%).
 
 ## **📄 License**
